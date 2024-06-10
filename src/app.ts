@@ -6,7 +6,6 @@ import cookieParser from "cookie-parser";
 export const app = express();
 import cors from "cors";
 
-console.log(process.env.PORT);
 // using middlewares
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

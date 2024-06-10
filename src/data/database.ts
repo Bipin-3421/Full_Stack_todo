@@ -1,8 +1,7 @@
 import mongoose from "mongoose";
-import { AppSettings } from "../config/env.config.js";
 export const connectDB = () => {
   mongoose
-    .connect(AppSettings.mongo_url as string, {
+    .connect(process.env.mongo_url as string, {
       dbName: "NodeTypescript",
     })
     .then(() => {
